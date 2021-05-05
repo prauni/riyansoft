@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "Scanner"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.prasenjit.aluni.riyansoft"
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { createAppContainer } from "react-navigation";
+import { createDrawerNavigator} from "react-navigation-drawer";
+import { Dimensions, View, Text } from "react-native";
+import { Feather } from "@expo/vector-icons";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { ProfileScreen, MyScannerScreen, MessageScreen, ActivityScreen, ListScreen, ReportScreen, StatisticScreen, SignoutScreen, GalleryScreen, ContactusScreen} from "./screens";
+import Sidebar from "./component/Sidebar";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const DrawerNavigator = createDrawerNavigator({
+        ProfileScreen:{
+            screen:ProfileScreen,
+            navigationOptions:{
+                title:"Profile",
+                drawerIcon:({tintColor}) => <Feather name="user" size={16} color={tintColor} />
+            }
+        }, 
+        ScannerScreen:{
+            screen:MyScannerScreen,
+            navigationOptions:{
+                title:"MyScanner",
+                drawerIcon:({tintColor}) => <Feather name="user" size={16} color={tintColor} />
+            }
+        },         
+        SignoutScreen:{
+            screen:SignoutScreen,
+            navigationOptions:{
+                title:"Logout",
+                drawerIcon:({tintColor}) => <Feather name="log-out" size={16} color={tintColor} />
+            }
+        }
+    },{
+        contentComponent:props => <Sidebar {...props} />
+    });
+  
+export default createAppContainer(DrawerNavigator);
