@@ -13,6 +13,7 @@ import Signout from '../component/mypages/signout';
 import Contactus from '../component/mypages/contactus';
 import MyScanner from '../component/mypages/myscanner';
 
+
 export default class Screen extends React.Component{
     render(){
         console.disableYellowBox = true;
@@ -61,7 +62,7 @@ export default class Screen extends React.Component{
             <View style={styles.container}>
                 <SafeAreaView style={{flex:1}}>
                     <TouchableOpacity 
-                        style={{alignItems:"flex-end", marginTop:16, marginBottom:6, marginRight:6}}
+                        style={{alignItems:"flex-end", marginTop:32, marginBottom:6, marginRight:6}}
                         onPress={this.props.navigation.openDrawer}
                     >
                         <FontAwesome5 name="bars" size={32} color="#161924" style={{margin:8}}></FontAwesome5>

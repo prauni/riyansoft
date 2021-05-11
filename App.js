@@ -5,11 +5,19 @@ import { Dimensions, View, Text } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
 import { ProfileScreen, MyScannerScreen, MessageScreen, ActivityScreen, ListScreen, ReportScreen, StatisticScreen, SignoutScreen, GalleryScreen, ContactusScreen} from "./screens";
+
 import Sidebar from "./component/Sidebar";
 
 const DrawerNavigator = createDrawerNavigator({
+        TestiingScreen:{
+            screen:MessageScreen,
+            navigationOptions:{
+                title:"Developing",
+                drawerIcon:({tintColor}) => <Feather name="user" size={16} color={tintColor} />
+            }
+        }, 
         ProfileScreen:{
-            screen:MyScannerScreen,
+            screen:ProfileScreen,
             navigationOptions:{
                 title:"Profile",
                 drawerIcon:({tintColor}) => <Feather name="user" size={16} color={tintColor} />
