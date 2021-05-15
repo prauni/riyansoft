@@ -12,6 +12,7 @@ import Statistic from '../component/mypages/statistic';
 import Signout from '../component/mypages/signout';
 import Contactus from '../component/mypages/contactus';
 import MyScanner from '../component/mypages/myscanner';
+import ImgUpload from '../component/mypages/imgupload';
 
 
 export default class Screen extends React.Component{
@@ -24,6 +25,9 @@ export default class Screen extends React.Component{
 
             if ( this.props.name == 'Profile') {
                 return <Profile />;
+            }
+            else if ( this.props.name == 'ImgUpload') {
+                return <ImgUpload />;
             }
             else if ( this.props.name == 'Gallery') {
                 return <Gallery />;

@@ -11,3 +11,4 @@ export const StatisticScreen = ({navigation}) => <Screen navigation={navigation}
 export const SignoutScreen = ({navigation}) => <Screen navigation={navigation} name="Signout" />;
 export const ContactusScreen = ({navigation}) => <Screen navigation={navigation} name="Contactus" />;
 export const MyScannerScreen = ({navigation}) => <Screen navigation={navigation} name="MyScanner" />;
+export const ImgUploadScreen = ({navigation}) => <Screen navigation={navigation} name="ImgUpload" />;
